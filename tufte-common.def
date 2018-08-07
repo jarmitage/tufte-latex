@@ -1538,16 +1538,37 @@
 %%
 % Produces a full title page
 
+% \newcommand{\maketitlepage}[0]{%
+%   \cleardoublepage%
+%   {%
+%   \sffamily%
+%   \begin{fullwidth}%
+%   \fontsize{18}{20}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\thanklessauthor}}%
+%   \vspace{11.5pc}%
+%   \fontsize{36}{40}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\thanklesstitle}}%
+%   \vfill%
+%   \fontsize{14}{16}\selectfont\par\noindent\allcaps{\thanklesspublisher}%
+%   \end{fullwidth}%
+%   }
+%   \thispagestyle{empty}%
+%   \clearpage%
+% }
+
+%% MODIFIED
+%% TODO: Improve
+% Produces a full title page
+
 \newcommand{\maketitlepage}[0]{%
   \cleardoublepage%
   {%
   \sffamily%
   \begin{fullwidth}%
-  \fontsize{18}{20}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\thanklessauthor}}%
-  \vspace{11.5pc}%
-  \fontsize{36}{40}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\thanklesstitle}}%
+  \fontsize{18}{22}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\thanklesstitle}}%
   \vfill%
-  \fontsize{14}{16}\selectfont\par\noindent\allcaps{\thanklesspublisher}%
+  \fontsize{12}{14}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\thanklessauthor}}%
+  \vspace{42pc}%
+  \vfill%
+  \fontsize{12}{14}\selectfont\par\noindent\allcaps{\thanklesspublisher}%
   \end{fullwidth}%
   }
   \thispagestyle{empty}%
