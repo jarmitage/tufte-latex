@@ -14,12 +14,15 @@
 
 %%
 % Book metadata
-\title[The Thesis Title]{The Thesis Title \\will go here when you know it: \\a meaningful and succinct phrase}
-\author[Your name here]{Your Name Here \\
-PhD thesis
+\title[The Thesis Title]{The Thesis Title 
+  \\ \noindent will go here when you know it: 
+  \\ \noindent a meaningful and succinct phrase}
+\author[Your name here]{Your Name Here
+  \\ \noindent Submitted in partial fulfillment of the requirements of the Degree of Doctor of Philosophy
+  \\ \noindent in Media and Arts Technologies
 }
-\publisher{School of Electronic Engineering and Computer Science\\
-Queen Mary University of London}
+\publisher{School of Electronic Engineering and Computer Science
+  \\ \noindent Queen Mary University of London}
 
 % \date{2018}
 
@@ -154,42 +157,33 @@ Queen Mary University of London}
 \newcommand{\docfilehook}[2]{\texttt{#1}\index{file hooks!#2}\index{#1@\texttt{#1}}}
 \newcommand{\doccounter}[1]{\texttt{#1}\index{#1 counter@\texttt{#1} counter}}
 
+% Creates an inline graphic
+% https://tex.stackexchange.com/questions/139143/how-to-set-an-inline-figure-matching-the-text-height
+% https://tex.stackexchange.com/questions/147642/how-to-create-new-commands-with-multiple-arguments
+\newcommand{\inlinegraphic}[2]{
+  \begingroup\normalfont
+  \includegraphics[height=#1]{#2}%
+  \endgroup
+}
+
+% NOTE: 1.5-2x line spacing required, see guidelines
+% https://en.wikibooks.org/wiki/LaTeX/Paragraph_Formatting#Line_spacing
+\usepackage{setspace}
+\onehalfspacing
+
 % Generates the index
 \usepackage{makeidx}
 \makeindex
 
 \begin{document}
 
-% Front matter
-\frontmatter
-
-
-% r.3 full title page
-\maketitle
-
-% qmul rules say abstract must be FIRST after title page
-\include{thesis/abstract}
-
-\include{thesis/acknowledgements}
-
-\include{thesis/license}
-
-% r.5 contents
-\tableofcontents
-
-\listoffigures
-
-\listoftables
-
-\include{thesis/abbreviations}
-
-\include{thesis/dedication}
+\include{thesis/0_frontmatter}
 
 %%
 % Start the main matter (normal chapters)
 \mainmatter
 
-\include{thesis/intro}
+\include{thesis/1_intro}
 
 \include{thesis/background}
 
