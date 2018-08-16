@@ -1,4 +1,5 @@
-graphics/signature*
+## Uncomment this line to prevent your signature from being saved:
+# graphics/signature*
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
